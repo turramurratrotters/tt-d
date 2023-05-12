@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<!-- collapse all     Ctrl + k + 0 -->
+<!-- expand all       Ctrl + k + j -->
+<!-- word wrap toggle Alt + z -->
+<html lang="en">
+<head>
+
+    <!-- SEO -->
+        <title>Turramurra Trotters</title>
+        <meta nme="description" content="Turramurra Trotters">
+        <!-- Use meta robots tags only when you want to restrict the way GOOGLE crawls a page; -->
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- SEO -->
+
+    <script src="tt.js" type="text/JavaScript" defer></script>
+
+    <link rel="stylesheet" href="tt.css" media="all" type="text/css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <link rel="icon" type="image/png" href="tt-logo-cropped.ico"/>
+    <link rel="shortcut icon" type="image/jpg" href="tt-logo-cropped.ico"/>
+
+</head>
+
+<body onload="doThisOnLoad()" onpagehide="doThisOnPageHide()" >
+    <div class="site-content-wrapper">
+        <!-- <div>inside site-content-wrapper - before header - don't put anything here</div> -->
+        <header>
+            <div class="header-bar">
+                <div id="header-bar-icon-container" class="header-bar-icon-container" onmouseenter="slideOutMenu()" onclick="slideOutMenu()">
+                    <div class="header-bar-icon"></div>
+                    <div class="header-bar-icon"></div>
+                    <div class="header-bar-icon"></div>
+                </div>
+                <nav>
+                    before ul
+                    <ul>
+                        <li>Run</li>
+                    </ul>
+                    after ul
+                </nav>
+                <div class="header-bar-name">
+                    <img src="tt-logo-cropped.png" title="Turramurra Trotters logo" class="turramurra-trotters-logo">
+                    <div >
+                        <div>Turramurra Trotters</div>
+                        <div>...running since 1974!</div>
+                    </div>
+                </div>
+                <div></div>
+            </div>
+            <div class="scroll-indicator-wrapper">
+                <div class="scroll-indicator-container">
+                    <div id="scroll-indicator" class="scroll-indicator"></div>
+                </div>
+                <hr>
+            </div>
+        </header>
+        <!-- <div>inside site-content-wrapper - after header - don't put anything here</div> -->
+        <main>
+            <div class="vertical-scroll-indicator-container">
+                <div id="vertical-scroll-indicator" class="vertical-scroll-indicator"></div>
+            </div>
+            <!-- <div class="main-grid"> -->
+                <!-- <div class="content-container"> -->
+                    <div id="nav-container" class="nav-container-hide">
+                        <!-- <ul id="nav-panel" class="nav-panel">
+                            <li id="run" class="nav-item" onclick="toggleCollapsables(this.id)">Run</li>
+                            <li id="walk" class="nav-item" onclick="toggleCollapsables(this.id)">Walk</li>
+                            <li id="cycle" class="nav-item" onclick="toggleCollapsables(this.id)">Cycle</li>
+                            <li id="where" class="nav-item" onclick="toggleCollapsables(this.id)">Where</li>
+                            <li id="when" class="nav-item" onclick="toggleCollapsables(this.id)">When</li>
+                            <li id="about" class="nav-item" onclick="toggleCollapsables(this.id)">About Us</li>
+                            <li id="contact" class="nav-item" onclick="toggleCollapsables(this.id)">Contact Us</li>
+                            <li id="coffee" class="nav-item" onclick="toggleCollapsables(this.id)">Coffee</li>
+                            <li id="cySchedule" class="nav-item" onclick="toggleCollapsables(this.id)">Training Program</li>
+                            <li id="events" class="nav-item" onclick="toggleCollapsables(this.id)">Popular Events</li>
+                            <li id="city2surf" class="nav-item" onclick="toggleCollapsables(this.id)">City-2-Surf</li>
+                        </ul> -->
+                        <div id="nav-panel" class="nav-panel" onmouseleave="slideAwayMenu()">
+                            <div id="run" class="nav-item" onclick="toggleCollapsables(this.id)">Run</div>
+                            <div id="walk" class="nav-item" onclick="toggleCollapsables(this.id)">Walk</div>
+                            <div id="cycle" class="nav-item" onclick="toggleCollapsables(this.id)">Cycle</div>
+                            <div id="where" class="nav-item" onclick="toggleCollapsables(this.id)">Where</div>
+                            <div id="when" class="nav-item" onclick="toggleCollapsables(this.id)">When</div>
+                            <div id="about" class="nav-item" onclick="toggleCollapsables(this.id)">About Us</div>
+                            <div id="contact" class="nav-item" onclick="toggleCollapsables(this.id)">Contact Us</div>
+                            <div id="coffee" class="nav-item" onclick="toggleCollapsables(this.id)">Coffee</div>
+                            <div id="cySchedule" class="nav-item" onclick="toggleCollapsables(this.id)">Training Program</div>
+                            <div id="events" class="nav-item" onclick="toggleCollapsables(this.id)">Popular Events</div>
+                            <div id="city2surf" class="nav-item" onclick="toggleCollapsables(this.id)">City-2-Surf</div>
+                        </div>
+                    </div>
+
+                    <!-- <div id="home-page-background" class="home-page-background"></div> -->
+                    <section>
+                            <div id="homeContent" class="i06-collapsable-content section-content-text">
+                                <p>Get active. Get social. Join our group!</p>
+                                <img src="181124-group-photo-alans-award-presentation-cropped-resized.jpg" class="section-background-home">
+                            </div>
+                        <!-- </div> -->
+                    </section>
+
+
+                    <section>
+                        <!-- <div class="section-content"> -->
+                            <div id="runContent" class="i06-collapsable-content section-content-text">
+                                <img src="AdobeStock_437023660-10percent-bw-cropped.jpg" class="section-background">
+                                <!-- <div class="section-content-background-image"></div> -->
+                                <h2>Run</h2>
+                                <p>Choose to run one of our official street circuits, or run your own course/distance.  Times are recorded by Alan with PB's tracked and recognised when all runners return to the start/finish line.</p>
+                                <p>There are 6 circuits to choose from ranging from 6.5k to 15k.  But you can choose to run any distance.</p>
+                            </div>
+                        <!-- </div> -->
+                    </section>
+
+                    <section>
+                        <div id="walkContent" class="i06-collapsable-content section-content-text">
+                            <img src="AdobeStock_437023660-10percent-bw-cropped.jpg" class="section-background">
+                            <h2>Walk</h2>
+                            <p>There are 4 circuits to choose from ranging from 2.4k to 7.1k.</p>
+                            <p>Walking through the quiet and picturesque streets of Wahroonga and Turramurra, the pace ranges from brisk to not-so-brisk.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div id="cycleContent" class="i06-collapsable-content section-content-text">
+                            <img src="AdobeStock_437023660-10percent-bw-cropped.jpg" class="section-background">
+                            <h2>Cycle</h2>
+                            <p>Some of our cyclists are ex-runners who have blended in nicely with some very experienced treddlers.</p>
+                            <p>Destinations vary and the planning often occurs during the ride!  But generally the group will arrive back at the start/finish line before the "meet" is over.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div id="coffeeContent" class="i06-collapsable-content section-content-text">
+                            <img src="AdobeStock_280397604-10percent.jpg" class="section-background">
+                            <h2>Coffee</h2>
+                            <p>Is at Adam's Cakes and Chocolates in Rohini Street, Turramurra.</p>
+                            <p>Here we unwind, discuss our runs/walks/rides, swap notes on injuries and relax.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div id="whereContent" class="i06-collapsable-content section-content-text">
+                            <img src="AdobeStock_437023660-10percent-bw-cropped.jpg" class="section-background">
+                            <h2>Where</h2>
+                            <p>Trotters have been meeting in Rohini Street, Turramurra [ opposite Kippling's Garage Bar ] for over <span class="ourYears"></span> years.</p>
+                            <p>Just head towards the Turramurra Train Station carpark in Rohini Street and look for people who look like they are ready to run, walk or cycle.</p>
+                            <div class="google-map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3318.1206369067327!2d151.1257626764964!3d-33.731696511972046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b12a7c4b6769fd9%3A0xccbbf650c115c69a!2s43%20Rohini%20St%2C%20Turramurra%20NSW%202074!5e0!3m2!1sen!2sau!4v1683082141582!5m2!1sen!2sau" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="google-map"></iframe>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div id="whenContent" class="i06-collapsable-content section-content-text">
+                            <img src="AdobeStock_437023660-10percent-bw-cropped.jpg" class="section-background">
+                            <h2>When</h2>
+                            <p>Trotters will start to gather at the start/finish line from around 6:00am each Saturday.  New to Trotters?, arrive between 6:15am and 6:25am- ( 15 minutes earlier in summertime ).  Scratch is 6:30am ( Walkers start 15 minutes earlier in summertime ).</p>
+                            <p>Start time is flexible, Alan keeps track of late and early starters and adjusts their times accordingly.</p>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div id="city2surfContent" class="i06-collapsable-content section-content-text">
+                            <img src="city2surf-sydney-2022-50percent.jpg" class="section-background">
+                            <h2>City-2-Surf</h2>
+                            <div class="i06-countdownContainer">
+                                <h3 id="headline">Countdown to City-2-Surf:</h3>
+                                <p id="c2sDate"></p>
+                                <div id="countdown">
+                                    <ul>
+                                        <li class="i06-countdownContainer-li"><span id="f_days"></span> Days</li>
+                                        <li class="i06-countdownContainer-li"><span id="f_hours"></span> Hours</li>
+                                        <li class="i06-countdownContainer-li"><span id="f_minutes"></span> Minutes</li>
+                                        <li class="i06-countdownContainer-li"><span id="f_seconds"></span> Seconds</li>
+                                    </ul>
+                                    <h2 id="f_futureDateTimeString"></h2>
+                                </div>
+                            </div>
+                            <div id="c2s-past-results" >
+                                <div><a href="https://city2surf.com.au/history/race-results/" target="_blank">City-2-Surf Past Results</a></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div id="cyScheduleContent" class="i06-collapsable-content section-content-text">
+                            <img src="city2surf-sydney-2022-50percent.jpg" class="section-background">
+                            <h2>Weekly Schedule</h2>
+                            <div>
+                                <div id="currentYearSchedule" class="i06-menu-item"></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div id="eventsContent" class="i06-collapsable-content section-content-text">
+                            <img src="AdobeStock_437023660-10percent-bw-cropped.jpg" class="section-background">
+                            <h2>Other Events</h2>
+                            <!-- <div id="tt-favourite-events-CSV-parsed-titles"></div> -->
+                            <div id="events-table" class="events-table"></div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div id="aboutContent" class="i06-collapsable-content section-content-text">
+                            <img src="AdobeStock_437023660-10percent-bw-cropped.jpg" class="section-background">
+                            <h2>About Us</h2>
+                            <div>
+                                <p>
+                                    Turramurra Trotters is an informal and non-competitive community group of runners, walkers and cyclists who meet in the Turramurra Station car park at 6.25am on Saturdays.<br>
+                                    There is also an 'official' Facebook page for general information, announcements and results at <span><a href="https://www.facebook.com/TurramurraTrotters" target="_blank">facebook.</a></span>
+                                    <br>
+                                </p>
+                                <!-- <p>
+                                    Meet us at the Turramurra Train Station car park start/finish line, 6:15am to 6:30am Saturdays.<br>
+                                    Run any of the 6 official courses or choose your own distance. The official courses and program are tailored to get you ready for the City to Surf in August each year.<br>
+                                    We are also competitive in 5k to 10k fun-runs, half and full marathons, and ultra running. See our favourite events page for more information.<br>
+                                    Walk the official course or choose your own distance. See more on the Trekkers page.<br>
+                                    Cycle to one of many the destinations favoured by our experienced group of dedicated cyclists.
+                                    <br>
+                                </p> -->
+                                <h3>Turramurra Trotters – a Short History</h3>
+                                <p>
+                                    Back in 1974 a small group of runners came together to train for the City to Surf, just 3 years after it started. From the beginning they kept their running times and started a handicap system.<br>
+                                    In the last <span class="ourYears"></span> years the Trotters have run every Saturday morning, firstly starting at 7:00am and now at 6:30am, including on Christmas Day, and even in torrential rain for a brave few.<br>
+                                    The Trotters continue to be an egalitarian group that encourages all runners, and still trains for the City to Surf. Also, we have members running in the Six Foot Track and Marathons both here and overseas.<br>
+                                    Defying inflation still only costs $0.20c for a drink after the run!<br>
+                                    Frequently, we are privileged to have Peter Welch, an Original Trotter, and our very own Legend.
+                                    <br>
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div id="contactContent" class="i06-collapsable-content section-content-text">
+                            <img src="AdobeStock_437023660-10percent-bw-cropped.jpg" class="section-background">
+                            <h2>Contact Us</h2>
+                            <h3><u>Telephone</u></h3>
+                            <table class="table-plain">
+                                <tr class="table-plain">
+                                    <td class="table-plain">Alan Cole</td>
+                                    <td class="table-plain">0418 229 507</td>
+                                </tr>
+                                <tr class="table-plain">
+                                    <td class="table-plain">Peter Welch</td>
+                                    <td class="table-plain">0410 834 833</td>
+                                </tr>
+                                <tr class="table-plain">
+                                    <td class="table-plain">Les Bryce</td>
+                                    <td class="table-plain">0429 813 351</td>
+                                </tr>
+                            </table>
+                            <br>
+
+                            <h3><u>Email</u></h3>
+                            <span>Send an <a href="mailto:alancole@outlook.com?,,&subject=enquiry from Turramurra Trotters website &body=Hello Alan, can you provide more informatio as I am interested in joining Turramurra Trotters.">email</a> to Alan Cole</span>
+
+                            <h3><u>Snail Mail</u></h3>
+                            <e>Write to:</e>
+                            <span style="color:blue">
+                                <p>Turramurra Trotters<br>
+                                PO Box N362<br>
+                                Grosvenor Place NSW 1220</p>
+                            </span>
+                            With the following details:<br>
+                            <table>
+                                <tr>
+                                    <td class="table-plain">Name:-</td>
+                                    <td class="table-plain">_________________________</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-plain">Email address:-</td>
+                                    <td class="table-plain">_________________________</td>
+                                </tr>
+                                <tr>
+                                    <td class="table-plain">Telephone No(s):-</td>
+                                    <td class="table-plain">_________________________</td>
+                                </tr>
+                            </table>
+                            <br>
+                        </div>
+                    </section>
+
+                <!-- </div> -->
+            <!-- </div> -->
+        </main>
+    <!-- End of class .site-content-wrapper. Place this ahead of the <footer></footer> to ensure the <footer></footer> is pushed to the bottom of screen on pages with mot much content. -->
+    </div>
+    <!-- End of class .site-content-wrapper. Place this ahead of the <footer></footer> to ensure the <footer></footer> is pushed to the bottom of screen on pages with mot much content. -->
+    <footer>
+        <!-- <div>inside footer</div> -->
+        <address>Turramurra Trotters<br>
+            PO Box N362<br>
+            Grosvenor Place NSW 1220</address>
+    </footer>
+</body>
+</html>

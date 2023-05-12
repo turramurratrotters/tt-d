@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="tt-sosm.css" media="all" type="text/css">
+    <link rel="stylesheet" href="tt.css" media="all" type="text/css">
+    <link rel="stylesheet" href="i06-icons.css" media="all" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+    <script src="siteAnalytics.js" type="text/JavaScript"></script>
+    <script src="tt-sosm.js" type="text/JavaScript"></script>
+    <script src="tt.js" type="text/JavaScript"></script>
+
+    <script>
+
+        // siteAccessPasswordPrompt();
+
+        // global variables start
+        var v_csvTitlesArray = [];
+        var v_csvTableArray = [];
+        var v_mappedTableArray = [];
+        var v_mappedFieldsArray = [];
+        var v_mappedTitlesArray = [];
+        var v_sessionAliveSeconds = 0;
+        // global variables end
+
+        // ANALYTICS start
+            // the following lines require "siteAnalytics.js"
+            // recordSessionStart();
+            // window.onwheel = function() {recordWheelEvent()};
+            // window.onkeydown = function() {recordKeydownEvent(event)};
+            // window.addEventListener('visibilitychange', function (e) {
+            //     // txtToServer(event.target);
+            //     recordVisibilityChangeEvent();
+            //     return;
+            // });
+            // // document.addEventListener('pagehide', function () {
+            // //     // if (v_clientOS=="iOS"){recordSessionEnd();}
+            // //     recordSessionEnd();
+            // // });
+            // window.addEventListener("pagehide", event => {
+            //     // txtToServer(event.target);
+            //     if (event.persisted) {
+            //         /* the page isn't being discarded, so it can be reused later */
+            //     } else {
+            //         recordSessionEnd();
+            //     }
+            // }, false);
+            // window.addEventListener("beforeunload", event => {
+            //     // txtToServer(event.target);
+            //     recordSessionEnd();
+            //     return;
+            // });
+        // ANALYTICS end
+
+
+    </script>
+
+    <title>Turramurra Trotters</title>
+    <link rel="shortcut icon" type="image/jpg" href="tt-logo-cropped.ico"/>
+
+</head>
+
+<!-- <body onload="doThisOnLoad()" onpagehide="doThisOnPageHide()" > -->
+<body>
+
+    <a href="index.html">
+        <img class="i06-home-icon" src="home-icon.png" title="Home">
+    </a>
+
+    <div id="currentYearSchedule">a</div>
+
+    <!-- <img class="" src="tt-logo-cropped.png" style="height: 90px; width: auto; position: absolute; left: 0; top: 3px"> -->
+    <p></p>
+    <img class="i06-logo" src="tt-logo-cropped.png" title="logo by Olaf Jirgenson">
+    <br>
+
+    <!-- Footer -->
+    <footer class="i06-footer">
+        <p>Powered by<a href="https://www.netit.com.au" title="click link to go to net IT Australia's web site" target="_blank" class="i06-hover-text-black">net IT Australia </a>&copy;</p>
+    </footer>
+
+</body>
+
+<script>
+
+    const v_clientOS = getClientOS();
+
+    currentYearSchedule();
+
+</script>
+
+</html>

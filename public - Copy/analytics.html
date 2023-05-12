@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="tt-sosm.css" media="all" type="text/css">
+    <link rel="stylesheet" href="tt.css" media="all" type="text/css">
+
+    <script src="tt-sosm.js" type="text/JavaScript"></script>
+    <script src="tt.js" type="text/JavaScript"></script>
+
+    <script src="siteAnalytics.js" type="text/JavaScript"></script>
+
+    <title>Turramurra Trotters</title>
+
+    <script>
+        // siteAccessPasswordPrompt();
+        // global variables start
+        var v_csvTitlesArray = [];
+        var v_csvTableArray = [];
+        var v_mappedTableArray = [];
+        var v_mappedFieldsArray = [];
+        var v_mappedTitlesArray = [];
+        var v_sessionAliveSeconds = 0;
+        // global variables end
+    </script>
+
+</head>
+
+<!-- <body onload="doThisOnLoad()" onpagehide="doThisOnPageHide()"> -->
+<body style="background-color:rgb(170,185,180)">
+
+    <!-- <div class="i06-top x-i06-card" style="background-color:rgb(170,185,180);z-index:1;">
+        <div class="i06-bar">
+            <img class="" src="tt-logo-cropped.png" style="height: 90px; width: auto; position: absolute; left: 0; top: 3px">
+            <div id="sosm-container"></div>
+            <button id="sosm-openbtn" class="sosm-openbtn" onclick="sosmOpen()">☰ click here for menu</button>  
+        </div>
+    </div> -->
+
+    <div id="monthView" style="margin-top:0px">
+    <!-- <div id="monthView" style="margin-top:100px"> -->
+        <table>
+            <tr>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+
+    <!-- <div class="i06-graph" style="margin-top:100px">
+        <div style="height: 22px;" class="i06-graph-bar"></div>
+        <div style="height: 11px;" class="i06-graph-bar"></div>
+        <div style="height: 6px;" class="i06-graph-bar"></div>
+        <div style="height: 49px;" class="i06-graph-bar"></div>
+        <div style="height: 28px;" class="i06-graph-bar"></div>
+    </div> -->
+
+    <br>
+
+    <div id="outPutA"></div>
+    <div id="outPutB"></div>
+
+    <!-- Footer -->
+    <footer class="i06-center i06-black i06-padding-16" style="text-align: center; padding: 16px; background-color:rgb(170,185,180)!important">
+        <p>Powered by <a href="https://www.netit.com.au" title="netIT" target="_blank" class="i06-hover-text-black">net IT</a></p>
+    </footer>
+
+</body>
+
+<script>
+
+    const v_clientOS = getClientOS();
+
+    // sosmInsert();
+
+    parseAnalyticsCSV_Step1();
+
+</script>
+
+</html>

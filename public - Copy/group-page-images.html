@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html lang="en-au">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="tt-sosm.css" media="all" type="text/css">
+    <link rel="stylesheet" href="tt.css" media="all" type="text/css">
+
+    <script src="tt-sosm.js" type="text/JavaScript"></script>
+    <script src="tt.js" type="text/JavaScript"></script>
+
+    <title>TT Group Page images</title>
+
+</head>
+
+<body>
+
+    <div class="i06-top i06-card">
+        <div class="i06-bar">
+            <img class="" src="tt-logo-cropped.png" style="height: 90px; width: auto; position: absolute; left: 0; top: 3px">
+            <div id="sosm-container"></div>
+            <button id="sosm-openbtn" class="sosm-openbtn" onclick="sosmOpen()">☰ click here for menu</button>  
+        </div>
+    </div>
+
+    <h1 style="margin-top:100px">images from TT's Group Page</h1>
+    <h2 >Captions will display when the page is fully loaded.</h2>
+    <!-- <h4>lengthy captions can be added to the images:- for example</h4> -->
+    <!-- <div id='x-i06-grid' class='i06-grid'>
+        <figure class="i06-grid-item-img">
+            <img class="i06-grid-item-img image-shape-normal" src="anzac-2016-1.jpg"/>
+            <figcaption id="" class="">Heading back to Turramurra after the Anzac Dawn Service. (behind the camera, Lara) ...and further details can be written about each photo.</figcaption>
+        </figure>
+    </div> -->
+    <h4>The following images have file details in the caption.  Dates are file dates and not necessarily the date of the photo. Images display at &frac12; second intervals.</h4>
+    <div id='i06-grid' class='i06-grid'></div>
+
+    <div id="symbolBoxSolidFillBlack">&#9632</div>
+
+</body>
+
+<script>
+
+    sosmInsert();
+
+// DISPLAY GALLERY start
+    var v_html=``;
+    displayImagesDump();
+    async function displayImagesDump(){
+        const v_path = "./facebook-images/";
+        const v_data = JSON.stringify(
+            {
+                p_path: v_path
+            }
+        );
+        const v_options = {method: 'POST', headers: {'Content-Type': 'application/json'},body: v_data};
+        await fetch('/displayImagesDump',v_options).then(res => {
+            return res.json();
+        }).then( async (res_data) => {
+            const v_sleep = (p_milliseconds) => {
+            return new Promise(resolve => setTimeout(resolve, p_milliseconds))
+            }
+            for (var i = 0; i < res_data.length; i++) {
+                await v_sleep(500);
+                addOneMoreFigureElement(res_data[i]);
+            }
+        }).then(() => {
+            var v_gridItems = document.getElementsByClassName('i06-grid-item-caption');
+            for (var e = 0; e < v_gridItems.length; e++) {
+                v_imageCaption = getCaption(e,v_gridItems[e].innerHTML,v_path);
+            }
+        }).then(() => {
+            var v_gridItems = document.getElementsByClassName('i06-grid-item-caption');
+            for (var e = 0; e < v_gridItems.length; e++) {
+                v_filePlusDate = getFileDetails(e,v_gridItems[e].innerHTML,v_path);
+                v_gridItems[e].style.display="block";
+            }
+        });
+    }
+    // async function addOneMoreFigureElement(p_fileName){
+    //     var v_html=``;
+    //     v_html+=`<figure class="i06-grid-item-img">`;
+    //         v_html+=`<img class="i06-grid-item-img image-shape-normal" src="${p_fileName}"/>`;
+    //         v_html+=`<figcaption id="${p_fileName}" class="i06-grid-item-caption" onclick="displayMe(this.id,this.innerText)" style="display:none; cursor:pointer" >${p_fileName}</figcaption>`;
+    //     v_html+=`</figure>`;
+    //     document.getElementById('i06-grid').innerHTML += v_html;
+    // }
+    async function addOneMoreFigureElement(p_fileName){
+        var v_html=``;
+        v_html+=`<figure class="i06-grid-item-img">`;
+//            v_html+=`<img class="i06-grid-item-img image-shape-normal" src="${p_fileName}" oncontextmenu="displayMe(this.id)"/>`;
+            v_html+=`<img class="i06-grid-item-img image-shape-normal" src="${p_fileName}" />`;
+            v_html+=`<figcaption id="${p_fileName}" class="i06-grid-item-caption" onclick="updateMyCaption(this.id,this.innerText)" style="display:none; cursor:pointer" >${p_fileName}</figcaption>`;
+        v_html+=`</figure>`;
+        document.getElementById('i06-grid').innerHTML += v_html;
+    }
+    async function getFileDetails(e,p_file,p_path){
+        // alert(e + ' ' + p_file + ' ' + p_path);
+        const v_data = JSON.stringify(
+            {
+                p_file: p_file,
+                p_path: p_path
+            });
+        const v_options = {method: 'POST', headers: {'Content-Type': 'application/json'},body: v_data};
+        await fetch('/getFileDetails',v_options).then( (res) => {
+            return res.json();
+        }).then( (res_data) => {
+            var v_res = '<span style="color:darkgrey; font-style:italic;font-size:80%">&#9632;' + p_file + '<br>' + new Date(res_data.mtimeMs).toLocaleString('en-AU') + '<br>' + res_data.sizeInBytes.toLocaleString('en')  + ' bytes' + '</span>';
+            // alert(v_res);
+            document.getElementById(p_file).innerHTML += v_res;
+        })
+    }
+    async function getCaption(e,p_file,p_path){
+        // if(e==0){alert(e + ' ' + p_file + ' ' + p_path);}else{}
+        const v_data = JSON.stringify(
+            {
+                p_file: p_file,
+                p_path: p_path
+            });
+        const v_options = {method: 'POST', headers: {'Content-Type': 'application/json'},body: v_data};
+        await fetch('/getCaption',v_options).then( (res) => {
+            return res.json();
+        }).then( (res_data) => {
+            var v_res = res_data.v_caption;
+            // if(e==0){alert(v_res);}else{}
+            if (v_res.length > 0){
+                document.getElementById(p_file).innerHTML = v_res +'<br>';
+            }else{
+                document.getElementById(p_file).innerHTML = '...click here to add a caption to this image<br>';
+            }
+        })
+    }
+// DISPLAY GALLERY end
+
+    // async function displayMe(p_elementID,p_caption){
+    //     await localStorage.setItem('p_elementID',p_elementID)
+    //     await localStorage.setItem('p_caption',p_caption)
+    //     // window.location.href = p_elementID;
+    //     // window.location.href = 'old-site-image-display.html';
+    //     window.open("old-site-image-display.html","");
+    // }
+    async function displayMe(p_elementID,p_caption){
+        await localStorage.setItem('p_elementID',p_elementID)
+        // await localStorage.setItem('p_caption',p_caption)
+        // window.location.href = p_elementID;
+        // window.location.href = 'old-site-image-display.html';
+        window.open("old-site-image-display.html","");
+    }
+
+    async function updateMyCaption(p_elementID,p_caption){
+
+        if (localStorage.getItem("pwd")!="ok-captions"){return;}
+
+        await localStorage.setItem('p_elementID',p_elementID)
+        await localStorage.setItem('p_caption',p_caption)
+
+        // v_html += `<button onclick="updateCaption(p_elementID,${v_fileName.value},${v_caption.value},${v_date.value})" >Save Caption</button>`;
+        var v_fileName = p_elementID;
+        var v_caption = p_caption;
+
+        // var v_str = localStorage.getItem('p_caption');
+        var v_str = p_caption;
+        var v_symbol = document.getElementById("symbolBoxSolidFillBlack").innerHTML;
+        var n = v_str.search(v_symbol);
+        var v_str2 = v_str.slice(0,n);
+        var v_fileDetails = v_str.slice(n+1,v_str.length);
+        // alert(v_fileDetails);
+        v_str2 = prompt('Update caption and click OK',v_str2);
+        if(v_str2==null){return;}
+
+        // alert(e_imageFileName.value + "\n\n" + e_imageCaption.value);
+        const v_data = JSON.stringify(
+            {
+                v_fileName: v_fileName,
+                v_caption: v_str2
+            });
+        const v_options = {method: 'POST', headers: {'Content-Type': 'application/json'},body: v_data};
+        await fetch('/updateCaption',v_options).then( (res) => {
+            return res.json();
+        }).then( (res_data) => {
+            console.log(res_data);
+        })
+
+        document.getElementById(p_elementID).innerHTML = v_str2 + '<br><span style="color:darkgrey; font-style:italic;font-size:80%">&#9632;' + v_fileDetails + '</span>';
+
+    }
+
+</script>
+
+</html>

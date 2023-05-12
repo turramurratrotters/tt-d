@@ -1,0 +1,333 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- SEO -->
+        <title>Turramurra Trotters</title>
+        <meta nme="description" content="BG Financial Group">
+        <!-- Use meta robots tags only when you want to restrict the way GOOGLE crawls a page; -->
+        <meta name="robots" content="index, follow">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- SEO -->
+
+    <link rel="stylesheet" href="tt-sosm.css" media="all" type="text/css">
+    <link rel="stylesheet" href="tt.css" media="all" type="text/css">
+    <link rel="stylesheet" href="i06-icons.css" media="all" type="text/css">
+
+    <script src="siteAnalytics.js" type="text/JavaScript"></script>
+    <script src="tt-sosm.js" type="text/JavaScript"></script>
+    <script src="tt.js" type="text/JavaScript"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+    <link rel="icon" type="image/png" href="tt-logo-cropped.ico"/>
+    <link rel="shortcut icon" type="image/jpg" href="tt-logo-cropped.ico"/>
+
+    <script>
+
+        // siteAccessPasswordPrompt();
+
+        // global variables start
+        var v_csvTitlesArray = [];
+        var v_csvTableArray = [];
+        var v_mappedTableArray = [];
+        var v_mappedFieldsArray = [];
+        var v_mappedTitlesArray = [];
+        var v_sessionAliveSeconds = 0;
+        // global variables end
+
+        // ANALYTICS start
+            // the following lines require "siteAnalytics.js"
+            recordSessionStart();
+            // window.onwheel = function() {recordWheelEvent()};
+            // window.onkeydown = function() {recordKeydownEvent(event)};
+            // window.addEventListener('visibilitychange', function (e) {
+            //     // txtToServer(event.target);
+            //     recordVisibilityChangeEvent();
+            //     return;
+            // });
+            // // document.addEventListener('pagehide', function () {
+            // //     // if (v_clientOS=="iOS"){recordSessionEnd();}
+            // //     recordSessionEnd();
+            // // });
+            // window.addEventListener("pagehide", event => {
+            //     // txtToServer(event.target);
+            //     if (event.persisted) {
+            //         /* the page isn't being discarded, so it can be reused later */
+            //     } else {
+            //         recordSessionEnd();
+            //     }
+            // }, false);
+            // window.addEventListener("beforeunload", event => {
+            //     // txtToServer(event.target);
+            //     recordSessionEnd();
+            //     return;
+            // });
+        // ANALYTICS end
+
+    </script>
+
+</head>
+
+<!-- <body onload="doThisOnLoad()" onpagehide="doThisOnPageHide()" > -->
+<body>
+
+    <img id="bounceAroundViewportImage" ontouchstart="stopAnimation(this.id)" onmouseover="stopAnimation(this.id)" class="i06-bounce-around-viewport-image i06-image-animation" src="runner.png" title="Turramurra Trotter">
+
+    <!-- <div onclick="" class="i06-menu-icon">&equiv;</div> -->
+    <!-- <div id="menu-container">a</div> -->
+
+    <div class="i06-mast-head">&nbsp;&nbsp;Turramurra Trotters</div>
+    <div class="i06-mast-head-sub-heading">...running since 1974!</div><br>
+
+    <div id="menuPopUp" onclick="menuClose()" style="display:none">
+    </div>
+
+    <div id="run" type="button" class="i06-collapsable-button i06-font-family" onclick="toggleCollapsables(this.id)">Run.</div>
+    <div id="runContent" class="i06-collapsable-content i06-grid-free-form">
+        <div class="i06-grid-item-free-form">
+            <p>Choose to run one of our official street circuits, or run your own course/distance.  Times are recorded by Alan with PB's tracked and recognised when all runners return to the start/finish line.</p>
+        </div>
+        <div class="i06-grid-item-free-form">
+            <p>There are 6 circuits to choose from ranging from 6.5k to 15k.  But you can choose to run any distance.</p>
+        </div>
+    </div>
+
+    <div id="walk" type="button" class="i06-collapsable-button i06-font-family" onclick="toggleCollapsables(this.id)">Walk.</div>
+    <div id="walkContent" class="i06-collapsable-content i06-grid-free-form">
+        <div class="i06-grid-item-free-form">
+            <p>There are 4 circuits to choose from ranging from 2.4k to 7.1k.</p>
+        </div>
+        <div class="i06-grid-item-free-form">
+            <p>Walking through the quiet and picturesque streets of Wahroonga and Turramurra, the pace ranges from brisk to not-so-brisk.</p>
+        </div>
+    </div>
+
+    <div id="cycle" type="button" class="i06-collapsable-button i06-font-family" onclick="toggleCollapsables(this.id)">Cycle.</div>
+    <div id="cycleContent" class="i06-collapsable-content i06-grid-free-form">
+        <div class="i06-grid-item-free-form">
+            <p>Some of our cyclists are ex-runners who have blended in nicely with some very experienced treddlers.</p>
+        </div>
+        <div class="i06-grid-item-free-form">
+            <p>Destinations vary and the planning often occurs during the ride!  But generally the group will arrive back at the start/finish line before the "meet" is over.</p>
+        </div>
+    </div>
+
+    <div id="coffee" type="button" class="i06-collapsable-button i06-font-family" onclick="toggleCollapsables(this.id)">Coffee.</div>
+    <div id="coffeeContent" class="i06-collapsable-content i06-grid-free-form">
+        <div class="i06-grid-item-free-form">
+            <p>Is at Adam's Cakes and Chocolates in Rohini Street, Turramurra.</p>
+        </div>
+        <div class="i06-grid-item-free-form">
+            <p>Here we unwind, discuss our runs/walks/rides, swap notes on injuries and relax.</p>
+        </div>
+    </div>
+
+    <div id="where" type="button" class="i06-collapsable-button i06-font-family" onclick="toggleCollapsables(this.id)">Where.</div>
+    <div id="whereContent" class="i06-collapsable-content i06-grid-free-form">
+        <div class="i06-grid-item-free-form">
+            <p>Trotters have been meeting in Rohini Street, Turramurra for over 47 years.</p>
+        </div>
+        <div class="i06-grid-item-free-form">
+                <p>Just head towards the Turramurra Train Station carpark in Rohini Street and look for people who look like they are ready to run, walk or cycle.</p>
+        </div>
+    </div>
+
+    <div id="when" type="button" class="i06-collapsable-button i06-font-family" onclick="toggleCollapsables(this.id)">When.</div>
+    <div id="whenContent" class="i06-collapsable-content i06-grid-free-form">
+        <div class="i06-grid-item-free-form">
+            <p>Trotters will start to gather at the start/finish line from around 6:00am each Saturday.  New to Trotters?, arrive between 6:15am and 6:25am- ( 15 minutes earlier in summertime ).  Scratch is 6:30am ( Walkers start 15 minutes earlier in summertime ).</p>
+        </div>
+        <div class="i06-grid-item-free-form">
+            <p>Start time is flexible, Alan keeps track of late and early starters and adjusts their times accordingly.</p>
+        </div>
+    </div>
+
+    <div id="c2sCountdown" type="button" class="i06-collapsable-button i06-font-family" onclick="toggleCollapsables(this.id)">City-2-Surf countdown.</div>
+    <div id="c2sCountdownContent" class="i06-collapsable-content i06-grid-free-form">
+        <div class="i06-grid-item-free-form">
+            <div class="i06-countdownContainer">
+                <h1 id="headline">Countdown to City-2-Surf:</h1>
+                <div id="countdown">
+                    <ul>
+                        <li class="i06-countdownContainer-li"><span id="f_days"></span>Days</li>
+                        <li class="i06-countdownContainer-li"><span id="f_hours"></span>Hours</li>
+                        <li class="i06-countdownContainer-li"><span id="f_minutes"></span>Minutes</li>
+                        <li class="i06-countdownContainer-li"><span id="f_seconds"></span>Seconds</li>
+                    </ul>
+                    <h2 id="f_futureDateTimeString"></h2>
+                    <!-- <h3>date to be confirmed</h3> -->
+                </div>
+                <!-- <div class="message">
+                    <div id="content">
+                    <span class="emoji"><img draggable="false" role="img" class="emoji" alt="🥳" src="https://s.w.org/images/core/emoji/13.0.1/svg/1f973.svg"></span>
+                    <span class="emoji"><img draggable="false" role="img" class="emoji" alt="🎉" src="https://s.w.org/images/core/emoji/13.0.1/svg/1f389.svg"></span>
+                    <span class="emoji"><img draggable="false" role="img" class="emoji" alt="🎂" src="https://s.w.org/images/core/emoji/13.0.1/svg/1f382.svg"></span>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+        <div class="i06-grid-item-free-form">
+            <div id="paceCalc" >
+                <h1>Pace calculator</h1>
+                <form>
+                    <label>distance (metres):-</label><input id="f_distance" type="number" style="width:75px;text-align:center;" onchange="updatePaceCalc()" onclick="this.select();" placeholder="" value=0>
+                    <label>hours:-</label><input id="f_hours" type="number" style="width:75px;text-align:center;" onchange="updatePaceCalc()" onclick="this.select();" placeholder="" value=0>
+                    <label>minutes:-</label><input id="f_minutes" type="number" style="width:75px;text-align:center;" onchange="updatePaceCalc()" onclick="this.select();" placeholder="" value=0>
+                    <label>seconds:-</label><input id="f_seconds" type="number" style="width:75px;text-align:center;" onchange="updatePaceCalc()" onclick="this.select();" placeholder="" value=0>
+                    <!-- <label>minutes per km</label><input id="f_pace" style="width:75px;" readonly disabled> -->
+                    <label>minutes per km:-</label><input id="f_pace" style="width:75px;color:black;text-align:center;background-color:lightgrey;" readonly>
+                </form>
+                <br>
+            </div>
+        </div>
+        <div class="i06-grid-item-free-form">
+            <div id="c2s-past-results" >
+                <h1>City-2-Surf</h1>
+                <p style="text-align:center;font-size:1.5em"><a href="https://city2surf.com.au/past-results" target="__blank">Past Results</a></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="cySchedule" type="button" class="i06-collapsable-button i06-font-family" onclick="toggleCollapsables(this.id)">Training Program.</div>
+    <div id="cyScheduleContent" class="i06-collapsable-content x-i06-grid-free-form">
+        <!-- <div class="i06-grid-item-free-form"> -->
+            <!-- <div id="currentYearSchedule" class="i06-menu-item"></div> -->
+        <!-- </div> -->
+    </div>
+
+    <div id="popularEvents" type="button" class="i06-collapsable-button i06-font-family" onclick="toggleCollapsables(this.id)">Events popular among Trotters.</div>
+    <div id="popularEventsContent" class="i06-collapsable-content x-i06-grid-free-form">
+        <!-- <div class="i06-grid-item-free-form"> -->
+            <!-- <div id="currentYearSchedule" class="i06-menu-item"></div> -->
+        <!-- </div> -->
+    </div>
+ 
+    <div id="about" type="button" class="i06-collapsable-button i06-font-family" onclick="toggleCollapsables(this.id)">About us.</div>
+    <div id="aboutContent" class="i06-collapsable-content i06-grid-free-form">
+        <!-- <div class="i06-grid-item-free-form"> -->
+            <!-- <h1>About</h1>
+            <div class="i06-grid-item-free-form">
+                <img class="" src="runner.png" style="height: 90px; width: auto; ">
+                <img class="" src="cyclist.png" style="height: 90px; width: auto; ">
+            </div> -->
+            <div class="i06-grid-item-free-form">
+                <p>
+                    Turramurra Trotters is an informal and non-competitive community group of runners, walkers and cyclists who meet in the Turramurra Station car park at 6.25am on Saturdays.<br>
+                    There is also an 'official' Facebook page for general information, announcements and results at <a href="https://www.facebook.com/TurramurraTrotters">https://www.facebook.com/TurramurraTrotters.</a>
+                    <br>
+                </p>
+            </div>
+            <!-- <div class="i06-grid-item-free-form">
+                <p>
+                    Meet us at the Turramurra Train Station car park start/finish line, 6:15am to 6:30am Saturdays.<br>
+                    Run any of the 6 official courses or choose your own distance. The official courses and program are tailored to get you ready for the City to Surf in August each year.<br>
+                    We are also competitive in 5k to 10k fun-runs, half and full marathons, and ultra running. See our favourite events page for more information.<br>
+                    Walk the official course or choose your own distance. See more on the Trekkers page.<br>
+                    Cycle to one of many the destinations favoured by our experienced group of dedicated cyclists.
+                    <br>
+                </p>
+            </div> -->
+            <div class="i06-grid-item-free-form">
+                <h3>Turramurra Trotters – a Short History</h3>
+                <p>
+                    Back in 1974 a small group of runners came together to train for the City to Surf, just 3 years after it started. From the beginning they kept their running times and started a handicap system.<br>
+                    In the last 47 years the Trotters have run every Saturday morning, firstly starting at 7:00am and now at 6:30am, including on Christmas Day, and even in torrential rain for a brave few.<br>
+                    The Trotters continue to be an egalitarian group that encourages all runners, and still trains for the City to Surf. Also, we have members running in the Six Foot Track and Marathons both here and overseas.<br>
+                    Defying inflation still only costs 20c for a drink after the run!<br>
+                    Frequently, we are privileged to have Peter Welch, an Original Trotter, and our very own Legend.
+                    <br>
+                </p>
+            </div>
+        <!-- </div> -->
+    </div>
+
+    <div id="contact" type="button" class="i06-collapsable-button i06-font-family" onclick="toggleCollapsables(this.id)">Contact us.</div>
+    <div id="contactContent" class="i06-collapsable-content i06-grid-free-form">
+        <div class="i06-grid-item-free-form">
+            <h3>Telephone</h3>
+            <table>
+                <tr>
+                    <td class="table-plain">Alan Cole</td>
+                    <td class="table-plain">0418 229 507</td>
+                </tr>
+                <tr>
+                    <td class="table-plain">Peter Welch</td>
+                    <td class="table-plain">0410 834 833</td>
+                </tr>
+                <tr>
+                    <td class="table-plain">Les Bryce</td>
+                    <td class="table-plain">0429 813 351</td>
+                </tr>
+            </table>
+            <br>
+        </div>
+        <div class="i06-grid-item-free-form">
+            <h3>Email</h3>
+            <span>Send an<a href="mailto:alancole@outlook.com?,,&subject=enquiry from Turramurra Trotters website &body=Hello Alan, can you provide more informatio as I am interested in joining Turramurra Trotters.">email</a> to Alan Cole</span>
+            <p></p>
+        </div>
+        <div class="i06-grid-item-free-form">
+            <h3>Snail Mail</h3>
+            <e>Write it (please see<b>details</b> below) and then post it to:</e>
+            <span style="color:blue">
+            <p>Turramurra Trotters<br>
+            PO Box N362<br>
+            Grosvenor Place NSW 1220</p></span>
+            With the following<b>details</b>:<br>
+            <table>
+                <tr>
+                    <td class="table-plain">Name:-</td>
+                    <td class="table-plain">_________________________</td>
+                </tr>
+                <tr>
+                    <td class="table-plain">Email address:-</td>
+                    <td class="table-plain">_________________________</td>
+                </tr>
+                <tr>
+                    <td class="table-plain">Telephone No(s):-</td>
+                    <td class="table-plain">_________________________</td>
+                </tr>
+            </table>
+            <br>
+        </div>
+    </div>
+    
+    <!-- <img class="" src="tt-logo-cropped.png" style="height: 90px; width: auto; position: absolute; left: 0; top: 3px"> -->
+    <p></p>
+    <img class="i06-logo" src="tt-logo-cropped.png" title="logo by Olaf Jirgenson">
+    <br>
+
+    <!-- Footer -->
+    <footer class="i06-footer">
+        <p>Powered by<a href="https://www.netit.com.au" title="click link to go to net IT Australia's web site" target="_blank" class="i06-hover-text-black">net IT Australia </a>&copy;</p>
+    </footer>
+
+</body>
+
+<script>
+
+    const v_clientOS = getClientOS();
+
+    // menuInsert();
+
+    setInterval(timeToFutureDateTime, 1000); // every second
+
+    // currentYearSchedule();
+
+    var v_interval;
+    setTimeout(function() {
+        // the code in here will run some time in the future
+        // bounceImageAroundViewport();
+        document.getElementById('bounceAroundViewportImage').style.top=Math.round(window.innerHeight/2) + 'px';
+        document.getElementById('bounceAroundViewportImage').style.left=Math.round(window.innerWidth/2) + 'px';
+        document.getElementById('bounceAroundViewportImage').style.display="block";
+        v_interval = setInterval('bounceImageAroundViewport()', 10); // 1000 = every second
+    }, 5000);
+
+</script>
+
+</html>

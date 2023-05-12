@@ -1,0 +1,318 @@
+* {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 5px;
+}
+h1 {
+    /* color:rgba(0,0,255,.7); */
+    color:white;
+    /* background-color: rgba(255,255,0,.5); */
+    background-color:slategrey;
+    text-align: center;
+}
+/* th {
+    border: solid 1px;
+    border-color: slategrey;
+    text-align: center;
+} */
+input{color:blue;}
+.table-simple {
+    border: solid 1px;
+    border-color: slategrey;
+    text-align: center;
+    padding: 2px 4px 2px 4px;    /* top right bottom left */
+    position: relative;
+}
+.table-simple-header100 {
+    border: solid 1px;
+    border-color: slategrey;
+    text-align: center;
+    padding: 2px 4px 2px 4px;    /* top right bottom left */
+    position: sticky;
+    top:0;
+    z-index: 2;
+    background: white;
+}
+.table-plain {
+    /* border: solid 1px; */
+    /* border-color: slategrey; */
+    /* text-align: center; */
+    padding: 2px 4px 2px 4px;     /* top right bottom left */
+}
+.i06-countdownContainer {
+    color: #333;
+    margin: 0 auto;
+    text-align: center;
+}
+.i06-countdownContainer-li {
+  display: inline-block;
+  font-size: 1.25em;
+  list-style-type: none;
+  padding: 1em;
+  /* text-transform: uppercase; */
+} 
+.i06-countdownContainer-li span {
+  display: block;
+  font-size: 4.5rem;
+}
+.i06-top,.i06-bottom{
+    position:fixed;
+    width:98vw;
+    z-index:1;
+    background-color: white;
+}
+.i06-top{top:0;height:95px;}
+.i06-bottom{bottom:0;}
+.home-page-banner-image {
+    width: auto;
+    height: 700px;
+    background-image: url('./181124-group-photo-alans-award-presentation-resized.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.i06-bar{width:98vw;overflow:hidden}
+/* .i06-bar{display:inline-block;width:auto} */
+/* .i06-bar {padding:8px 16px;float:left;width:auto;border:none;display:block;outline:0} */
+.i06-bar{padding:10px 10px;display:block;position:static;float:none}
+/* .i06-bar {white-space:normal} */
+/* .i06-bar:before,.i06-bar:after{content:"";display:table;clear:both} */
+/* .i06-card{box-shadow:0 2px 5px 0 rgba(0,0,255,0.5),0 2px 10px 0 rgba(0,0,255,0.5)} */
+.i06-card{box-shadow:0 0px 5px 0 rgba(0,0,255,0.5),0 0px 0px 0 rgba(0,0,255,0.5)}
+.i06-image-mid-horizontal-50 {
+    max-width: 98vw;
+    /* normal display = [ x:0,y:0  x:100,y:0   x:100,y:100 x:0,y:100 ] */
+    clip-path: polygon(0% 25%, 100% 25%, 100% 75%, 0% 75%);
+}
+:target:before {
+    content:"";
+    display:block;
+    height:90px; /* fixed header height*/
+    margin:-90px 0 0; /* negative fixed header height */
+}
+
+        /* GRID start */
+            .i06-grid-free-form { 
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+                grid-gap: 10px;
+                align-items: start;
+            }
+            .i06-grid-item-free-form{
+                /* border: 1px solid #ccc; */
+                border: 1px solid black;
+                box-shadow: 6px 6px 10px 0px  rgba(0,0,0,0.3);
+                max-width: 98vw;
+                margin-bottom: 10px;
+            }
+            .i06-grid-sub-item-free-form{
+                border: 1px solid #ccc;
+                box-shadow: 6px 6px 10px 0px  rgba(0,0,0,0.3);
+                max-width: 98vw;
+                font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+                font-size: 1rem;
+            }
+            .i06-grid-item-free-form-img {
+                border: 1px solid #ccc;
+                box-shadow: 6px 6px 10px 0px  rgba(0,0,0,0.3);
+                max-width: 98vw;
+            }
+                /* .grid-xcols-xrows {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr); /* 1fr = 1 fraction 
+                    grid-template-rows: repeat(4, 4vw); /* vw = viewport width 
+                    grid-gap: 1px;
+                }
+                .grid-item {
+                    background-color: rgba(255, 255, 255, 0.8);
+                    border: 1px solid rgba(0, 0, 0, 0.8);
+                    padding: 20px;
+                    font-size: 30px;
+                    text-align: center;
+                }
+                .grid-item-img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover; /* The object fit property only works if we set the width and height properties. 
+                }
+                .grid-item:nth-child(2) {
+                    grid-column: auto / span 1;
+                }
+                .grid-item:nth-child(3) {
+                    grid-column: auto / span 1;
+                    grid-row: auto / span 1;
+                } */
+        /* GRID end */
+
+.i06-graph {
+    width: 150px;
+    height: 150px;
+    border: 1px solid green;
+    background-color: lightgrey;
+}
+.i06-graph-bar {
+    width: 8px;
+    margin: 1px;
+    display: inline-block;
+    position: relative;
+    background-color: green;
+    vertical-align: baseline;
+}
+.i06-table-header-fixed-analytics{
+    position: fixed;
+    top: 100px; 
+    /* display:none; */
+    background-color:white;
+}
+.i06-menu-item{
+    display: none;
+}
+.i06-mast-head{
+    font-family: 'Reenie Beanie', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 4rem; /* root em *//* An em value is equal to the computed font-size of the parent of that element. E. g., if there is a <div> element having font-size: 16px then 1em=16px for the <div> and its child elements. When the font-size isn’t specified explicitly, that element will inherit it from the parent element. This inheritance continues up until the root element. The root element’s font-size is provided by the browser. */
+    color: blue;
+    background-color: white;
+    text-align: center;
+    position: relative;
+    /* position: sticky; */
+    /* top: 0px; */
+    z-index: -1;
+}
+.i06-mast-head-sub-heading{
+    font-family: 'Reenie Beanie', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem; /* root em *//* An em value is equal to the computed font-size of the parent of that element. E. g., if there is a <div> element having font-size: 16px then 1em=16px for the <div> and its child elements. When the font-size isn’t specified explicitly, that element will inherit it from the parent element. This inheritance continues up until the root element. The root element’s font-size is provided by the browser. */
+    text-align: center;
+    position: relative;
+    z-index: -1;
+}
+.i06-menu-icon{
+    color: yellow;
+    /* background-color: rgb(170,185,180); */
+    background-color: blue;
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    border-radius:5px 5px 5px 5px;
+    font-size: 30px;
+    position: fixed;
+    top: 3px;
+    left: 3px;
+}
+.i06-home-icon{
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    /* width: 50%; */
+
+    height: 50px;
+    /* width: auto; */
+}
+.i06-logo{
+    display: block;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    /* width: 50%; */
+
+    height: 90px;
+    /* width: auto; */
+}
+
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    20% { opacity: 0; }
+    40% { opacity: 0.3; }
+    60% { opacity: 0.5; }
+    80% { opacity: 0.9; }
+    100% { opacity: 1; }
+}
+.i06-font-family{
+    font-family: 'Reenie Beanie', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 2rem;
+}
+#contacts .i06-grid-item-free-form{
+    /* margin: 15px; */
+    padding: 15px;
+}
+
+.i06-footer{
+    text-align: center; 
+    padding: 16px;
+    background-color:rgb(170,185,180);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    border-radius:5px 5px 5px 5px;
+}
+
+/* COLLAPSABLE start */
+    .i06-collapsable-button {
+        /* background-color: #777; */
+        background-color: rgb(170,185,180);
+        /* color: white; */
+        color: inherit;
+        cursor: pointer;
+        padding: 8px;
+        margin-bottom: 10px;
+        /* width: 98vw; */
+        border: none;
+        text-align: center;
+        outline: none;
+        /* font-size: 15px; */
+        box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+        border-radius:5px 5px 5px 5px;
+    }
+    .i06-active-element, .i06-collapsable-button:hover {
+        /* background-color: #555; */
+        background-color: rgb(170,185,180);
+    }  
+    .i06-collapsable-content {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        /* background-color: #f1f1f1; */
+        background-color: inherit;
+    }
+    .i06-collapsable-button:after {
+        content: '\02795'; /* Unicode character for "plus" sign (+) */
+        font-size: 13px;
+        color: white;
+        float: right;
+        /* margin-left: 5px; */
+    }
+    .i06-active-element:after {
+        content: "\2796"; /* Unicode character for "minus" sign (-) */
+    }
+/* COLLAPSABLE end */
+
+/* ANIMATIONS start */
+.i06-bounce-around-viewport-image{
+    opacity: 10%;
+    position: fixed;
+    top: 1px;
+    left: 1px;
+    display: none;
+}
+.i06-image-animation {
+    border-radius:25px 5px 25px 5px;
+}
+.x-i06-image-animation:hover {
+    /* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: i06-shake 0.5s;
+
+    /* When the animation is finished, start again */
+    animation-iteration-count: infinite;
+}  
+@keyframes i06-shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+/* ANIMATIONS end */

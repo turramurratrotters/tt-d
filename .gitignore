@@ -1,0 +1,5 @@
+/.env.development
+/! 1 run node index 1974.bat
+/! 1 run nodemon index 1974.bat
+/! 2 run cmd.bat
+/!3 NPM maintenance.bat

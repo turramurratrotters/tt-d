@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="tt-sosm.css" media="all" type="text/css">
+    <link rel="stylesheet" href="tt.css" media="all" type="text/css">
+    <link rel="stylesheet" href="i06-icons.css" media="all" type="text/css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
+
+    <script src="siteAnalytics.js" type="text/JavaScript"></script>
+    <script src="tt-sosm.js" type="text/JavaScript"></script>
+    <script src="tt.js" type="text/JavaScript"></script>
+
+    <title>Turramurra Trotters</title>
+    <link rel="shortcut icon" type="image/jpg" href="tt-logo-cropped.ico"/>
+
+</head>
+<body>
+
+    <div id="c2s-times-history">
+        <a href="https://www.multisportaustralia.com.au/races/city2surfVR-2020/search?search=helen+he">Helen He</a>
+    </div>
+
+    <script>
+
+        fetch('/https://results.timingsports.com/search.aspx?EventID=city2surf&Edition=2016&q=he').then(function (response) {
+                // https://results.timingsports.com/search.aspx?EventID=city2surf&Edition=2016&q=he
+            // The API call was successful!
+            return response.text();
+        }).then(function (html) {
+            // This is the HTML from our response as a text string
+            console.log(html);
+        }).catch(function (err) {
+            // There was an error
+            console.warn('Something went wrong.', err);
+        });
+
+    </script>
+
+</body>
+</html>
